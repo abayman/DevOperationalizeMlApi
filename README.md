@@ -1,13 +1,13 @@
 
 [![CircleCI](https://circleci.com/gh/abayman/DevOperationalizeMlApi.svg?style=svg)](https://circleci.com/gh/abayman/DevOperationalizeMlApi)
 
-# Operationalize-a-Machine-Learning-Microservice-API
-Microservice Project [Udacity Cloud DevOps Engineer Nanodegree]
+# Udacity Cloud DevOps Engineer Nanodegree Project: Operationalize a machine learning API
+Microservice Project
 
-## Project Overview
-Deploy a containerized Python flask application to serve out predictions (inference) about housing prices through API calls. It uses a a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features. 
+## Project Overview:
+In this project, we use a pre-trained sklearn model that can predict housing prices in Boston.
 
-### Project Procedure
+### Tasks:
 * Test project code using linting
 * Complete a Dockerfile to containerize this application
 * Deploy containerized application using Docker and make a prediction
@@ -23,20 +23,24 @@ Deploy a containerized Python flask application to serve out predictions (infere
 
 * Create a virtualenv and activate it
 ```
-python3 -m venv <your_venv>
-source <your_venv>/bin/activate
+python3 -m venv <venv_name>
+source <venv_name>/bin/activate
 ```
 * Run `make install` to install the necessary dependencies
+* Install docker from the official sources
+* Use hadolint github documentation to build the linting tool
+* Run `make lint` to lint the Dockerfile
 
 ### Running `app.py`
 
-1. Standalone:  `python app.py`
-2. Run in Docker:  `./run_docker.sh`
-3. Run in Kubernetes:  `./run_kubernetes.sh`
+1. Run in Docker:  `sh run_docker.sh`
+2. Run in Kubernetes:  `sh run_kubernetes.sh`
+
 
 ### Kubernetes Steps
 
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+* Install VirtualBox
+* Install kubectl via `sudo install minikube`
+* start kube via `minikube start`
+* Create flask app in the container
+* Run via `kubectl run` or the file via `sh run_kubernetes.sh`
