@@ -1,0 +1,8 @@
+abdelrahman@ubuntu:~/Documents/Operationalize-a-Machine-Learning-Microservice-API$ sh make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+
